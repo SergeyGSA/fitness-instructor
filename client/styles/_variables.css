@@ -1,0 +1,17 @@
+:root {
+  /* COMMON */
+  --base: 4px;
+  --animation-duration: 0.4s;
+
+  /* COLORS */
+  --bg-primary-color: #edf1f5;
+  --bg-secondary-color: #fff;
+
+  --primary-color: #1ca9ff;
+  --secondary-color: #ffbd2a;
+
+  --text-primary-color: #0d0f13;
+
+  /* FONTS */
+  --md-font-size: 12px;
+}
