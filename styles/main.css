@@ -2,6 +2,10 @@
 @import './_variables.css';
 @import './_reset.css';
 
+/* =COMPONENTS= */
+@import './_header.css';
+/* =/COMPONENTS= */
+
 body {
   position: relative;
   font-family: 'Open Sans', Arial, sans-serif;
@@ -15,133 +19,47 @@ body {
   text-align: center;
 }
 
-/* ================= HEADER ================ */
-/* =COMMON= */
-.header {
-  position: fixed;
-  width: 100%;
-  padding: calc(var(--base) * 5) 0;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  background-color: rgba(255, 255, 255, 0.6);
-  z-index: 10;
-}
-
-.header-nav__menu,
-.header-socials__menu {
-  display: flex;
-}
-
-.header-nav__menu-item:last-child,
-.header-socials__menu-item:last-child {
-  margin-right: 0px;
-}
-/* =/COMMON= */
-
-/* =NAV= */
-.header-nav__menu-item {
-  margin-right: calc(var(--base) * 8);
-}
-
-.header-nav__menu-item::after {
-  content: '';
-  display: block;
-  margin: 0 auto;
-  width: 0;
-  height: 2px;
-  background-color: var(--text-primary-color);
-  transition: 0.4s ease-out;
-}
-
-.header-nav__menu-item:hover::after {
-  width: 100%;
-}
-
-.header-nav__menu-link {
-  text-decoration: none;
-  color: var(--text-primary-color);
-  font-weight: 700;
-  text-transform: uppercase;
-  font-size: var(--md-font-size);
-}
-
-.header-nav__menu-link:hover {
-  color: var(--text-primary-color);
-}
-/* =/NAV= */
-
-/* =SOCIALS= */
-.header-socials__menu-item {
-  margin-right: calc(var(--base) * 4);
-  overflow: hidden;
-}
-
-.header-socials__menu-link {
-  position: relative;
-}
-
-.header-socials__menu-link::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -10px;
-  width: 3em;
-  height: 25%;
-  background-color: #fff;
-  opacity: 0.6;
-  transform: translateY(-1em) rotate(-45deg);
-}
-
-.header-socials__menu-link:hover:after {
-  animation: animated-social var(--animation-duration);
-}
-
-@keyframes animated-social {
-  from {
-    transform: translateY(-1em) rotate(-45deg);
-  }
-  to {
-    transform: translateY(2em) rotate(-45deg);
-  }
-}
-/* =/SOCIALS= */
-/* ================= /HEADER ================ */
-
 .main {
   background-color: var(--bg-primary-color);
   color: var(--text-primary-color);
   font-size: 24px;
 }
 
-.first {
+.info {
   min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
 }
 
-.first-info {
+@media (max-width: 991px) {
+  .info {
+    padding-top: 60px;
+    flex-direction: column;
+  }
+}
+
+.info-wrapper {
   min-height: 65vh;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
 }
 
-.first-info__heading {
+.info__heading {
   color: var(--text-primary-color);
   font-size: 44px;
   font-weight: 600;
   background-position: center center;
 }
 
-.first-info__motivation-item {
+.info__motivation-item {
   font-weight: 600;
   position: relative;
   margin-left: 20px;
 }
 
-.first-info__motivation-item::before {
+.info__motivation-item::before {
   content: '';
   display: block;
   width: 8px;
@@ -152,7 +70,7 @@ body {
   left: -20px;
 }
 
-.first-info__apply {
+.info__apply {
   background-color: var(--secondary-color);
   color: var(--text-primary-color);
   font-weight: 600;
@@ -162,7 +80,7 @@ body {
   border: none;
 }
 
-.first-info__apply::after {
+.info__apply::after {
   content: '';
   position: absolute;
   top: 15px;
@@ -174,11 +92,11 @@ body {
   transform: translateX(-1em) rotate(-45deg);
 }
 
-.first-info__apply:hover {
+.info__apply:hover {
   background-color: var(--secondary-color);
 }
 
-.first-info__apply:hover::after {
+.info__apply:hover::after {
   animation: animated-button var(--animation-duration);
 }
 
@@ -191,7 +109,7 @@ body {
   }
 }
 
-.first-coach {
+.info-coach {
   display: flex;
   width: 200px;
   height: 200px;
@@ -200,27 +118,6 @@ body {
 }
 
 /* ================= REVIEWS ================ */
-/* .reviews p { */
-/*  */
-/* color: var(--text-primary-color); */
-/*  */
-/* font-size: 16px;
-} */
-
-/* .reviews__item-heading {
-  color: var(--text-primary-color); */
-/*  */
-/* color: #fff; */
-/*  */
-/* } */
-
-/* .carousel-control-prev-icon,
-.carousel-control-next-icon {
-  background-color: var(--text-primary-color);
-  border-radius: 50%;
-  padding: 20px;
-} */
-
 .reviews {
   padding: 100px 0 50px 0;
   background-color: var(--bg-secondary-color);
