@@ -1,12 +1,21 @@
 document.addEventListener('DOMContentLoaded', function () {
   const burger = document.querySelector('.header-nav__burger'),
     navMenu = document.querySelector('.header-nav__menu'),
+    navLinks = document.querySelectorAll('.header-nav__menu-link'),
     body = document.querySelector('body')
 
   burger.addEventListener('click', () => {
     burger.classList.toggle('active')
     navMenu.classList.toggle('active')
     body.classList.toggle('lock')
+  })
+
+  navLinks.forEach((navLink) => {
+    navLink.addEventListener('click', () => {
+      burger.classList.remove('active')
+      navMenu.classList.remove('active')
+      body.classList.remove('lock')
+    })
   })
 })
 
