@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', function () {
     navLinks = document.querySelectorAll('.header-nav__menu-link'),
     body = document.querySelector('body')
 
+  // Open burger menu
   burger.addEventListener('click', () => {
     burger.classList.toggle('active')
     navMenu.classList.toggle('active')
@@ -11,7 +12,17 @@ document.addEventListener('DOMContentLoaded', function () {
   })
 
   navLinks.forEach((navLink) => {
-    navLink.addEventListener('click', () => {
+    navLink.addEventListener('click', (e) => {
+      e.preventDefault()
+
+      // Custom scrolling by page
+      const id = e.target.getAttribute('href').replace('#', '')
+      window.scrollTo({
+        top: document.getElementById(id).offsetTop,
+        behavior: 'smooth',
+      })
+
+      // Close opened menu on small screens
       burger.classList.remove('active')
       navMenu.classList.remove('active')
       body.classList.remove('lock')
