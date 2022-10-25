@@ -1,0 +1,263 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
+@import './_variables.scss';
+@import './_reset.scss';
+
+/* =COMPONENTS= */
+@import './components/_header.scss';
+/* =/COMPONENTS= */
+
+// FIXME: Set font size for right adaptive
+html {
+  @media (max-width: 767px) {
+    font-size: 10px;
+  }
+}
+
+body {
+  position: relative;
+  font-family: 'Open Sans', Arial, sans-serif;
+
+  &.lock {
+    @media (max-width: 767px) {
+      overflow: hidden;
+    }
+  }
+}
+
+.section-heading {
+  margin-bottom: 50px;
+  color: $text-primary-color;
+  font-size: $fs-xxxl;
+  font-weight: 700;
+  text-align: center;
+}
+
+.main {
+  background-color: $bg-primary-color;
+  color: $text-primary-color;
+  font-size: $fs-xl;
+}
+
+.intro {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+@media (max-width: 991px) {
+  .intro {
+    padding-top: 60px;
+    flex-direction: column;
+  }
+}
+
+.intro-wrapper {
+  min-height: 65vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.intro__heading {
+  color: $text-primary-color;
+  font-size: $fs-xxl;
+  font-weight: 600;
+  background-position: center center;
+}
+
+.intro__motivation-item {
+  font-weight: 600;
+  position: relative;
+  margin-left: 20px;
+}
+
+.intro__motivation-item::before {
+  content: '';
+  display: block;
+  width: 8px;
+  height: 8px;
+  background-color: $primary-color;
+  position: absolute;
+  top: 14px;
+  left: -20px;
+}
+
+.intro__apply {
+  background-color: $secondary-color;
+  color: $text-primary-color;
+  font-weight: 600;
+  padding: 10px 40px;
+  position: relative;
+  overflow: hidden;
+  border: none;
+}
+
+.intro__apply::after {
+  content: '';
+  position: absolute;
+  top: 15px;
+  left: -50px;
+  width: 5em;
+  height: 25%;
+  background-color: #fff;
+  opacity: 0.6;
+  transform: translateX(-1em) rotate(-45deg);
+}
+
+.intro__apply:hover {
+  background-color: $secondary-color;
+}
+
+.intro__apply:hover::after {
+  animation: animated-button $animation-duration;
+}
+
+@keyframes animated-button {
+  from {
+    transform: translateX(-1em) rotate(-45deg);
+  }
+  to {
+    transform: translateX(18em) rotate(-45deg);
+  }
+}
+
+.intro-coach {
+  display: flex;
+  width: 200px;
+  height: 200px;
+  border: 5px solid #000;
+  border-radius: 50%;
+}
+
+/* ================= REVIEWS ================ */
+.reviews {
+  padding: 100px 0 50px 0;
+  background-color: $bg-secondary-color;
+}
+
+.carousel-item {
+  padding-bottom: 100px;
+}
+
+.carousel-item p {
+  font-size: $fs-m;
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+.reviews__item {
+  max-width: 50%;
+  margin: 0 auto;
+  color: $text-primary-color;
+}
+
+.reviews__item-author {
+  font-size: $fs-l;
+  line-height: 1.35;
+  font-weight: 600;
+  color: $text-primary-color;
+}
+
+.carousel-control-next,
+.carousel-control-prev,
+.carousel-indicators {
+  /* Change default color of arrows and indicators from white to black */
+  filter: invert(100%);
+}
+
+/* ================= /REVIEWS ================ */
+
+/* ================= FAQ ================ */
+.faq {
+  padding: 100px 100px 150px 100px;
+  position: relative;
+}
+
+.faq::before {
+  content: '';
+  display: block;
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  top: 150px;
+  left: 150px;
+  border: 5px solid $primary-color;
+  z-index: 1;
+}
+
+.faq::after {
+  content: '';
+  display: block;
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  top: 250px;
+  right: 150px;
+  border: 5px solid $primary-color;
+  z-index: 1;
+}
+
+.accordion-wrapper {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.accordion {
+  width: 40%;
+  z-index: 9;
+}
+
+.accordion-button:focus {
+  box-shadow: none;
+}
+
+.accordion-header {
+  font-size: $fs-l;
+  line-height: 1.2;
+  font-weight: 600;
+  color: $text-primary-color;
+}
+
+.accordion-body {
+  font-size: $fs-m;
+  line-height: 1.4;
+  font-weight: 600;
+  color: $text-primary-color;
+}
+/* ================= /FAQ ================ */
+
+/* ================= APPLY ================ */
+.apply {
+  padding: 100px 0 50px 0;
+  background-color: $primary-color;
+}
+
+.apply__form {
+  max-width: 30%;
+  min-height: 400px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 50px;
+  border-radius: 5%;
+  background-color: $bg-secondary-color;
+}
+
+.apply__form label {
+  font-size: $fs-s;
+  font-weight: 700;
+  color: $text-primary-color;
+}
+/* ================= /APPLY ================ */
+
+/* ================= FOOTER ================ */
+.footer {
+  background: $text-primary-color;
+  color: $bg-secondary-color;
+  padding: 20px 0;
+  display: flex;
+  justify-content: center;
+}
+/* ================= /FOOTER ================ */

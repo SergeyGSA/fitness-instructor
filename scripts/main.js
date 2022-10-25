@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function () {
-  const burger = document.querySelector('.header-nav__burger'),
-    navMenu = document.querySelector('.header-nav__menu'),
-    navLinks = document.querySelectorAll('.header-nav__menu-link'),
+  const burger = document.querySelector('#burger'),
+    navMenu = document.querySelector('#nav-menu'),
+    navLinks = document.querySelectorAll('#nav-menu__link'),
     body = document.querySelector('body')
 
   // Open burger menu
@@ -31,6 +31,7 @@ document.addEventListener('DOMContentLoaded', function () {
 })
 
 const form = document.querySelector('#form')
+// FIXME: Change fetch to axios
 // form.addEventListener('submit', async function (e) {
 //   e.preventDefault()
 
