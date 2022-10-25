@@ -57,7 +57,7 @@
   color: var(--text-primary-color);
   font-weight: 700;
   text-transform: uppercase;
-  font-size: var(--md-font-size);
+  font-size: var(--fs-xs);
 }
 
 .header-nav__menu-link:hover {
@@ -195,7 +195,7 @@
 
   .header-nav__menu-link {
     color: var(--bg-secondary-color);
-    font-size: 14px !important;
+    font-size: var(--fs-s) !important;
   }
 
   .header-socials__menu {
@@ -220,7 +220,7 @@
   }
 
   .header-nav__menu-link {
-    font-size: 10px;
+    font-size: var(--fs-xxs);
     line-height: 14px;
   }
 }

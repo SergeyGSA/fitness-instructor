@@ -13,5 +13,18 @@
   --text-primary-color: #0d0f13;
 
   /* FONTS */
-  --md-font-size: 12px;
+  --fs-xxs: 10px;
+  --fs-xs: 12px;
+  --fs-s: 14px;
+  --fs-m: 16px;
+  --fs-l: 18px;
+  --fs-xl: 24px;
+  --fs-xxl: 44px;
+  --fs-xxxl: 52px;
 }
+
+/* 16px m
+18px l
+24px xl
+44px xxl
+52px xxxl */
