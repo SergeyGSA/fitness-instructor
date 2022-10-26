@@ -69,8 +69,8 @@
       position: absolute;
       left: 0;
       width: 100%;
-      height: $base * 0.75;
-      top: $base * 2.25;
+      height: 3px;
+      top: $base * 1.75;
       transition: all $animation-duration;
     }
   }
@@ -82,7 +82,7 @@
       background-color: $text-primary-color;
       position: absolute;
       width: 100%;
-      height: $base * 0.75;
+      height: 3px;
       left: 0;
       transition: all $animation-duration;
     }
@@ -147,7 +147,7 @@
       margin-right: $base * 8;
 
       @media (max-width: 767px) {
-        margin-bottom: $base * 5;
+        margin-bottom: $base * 10;
       }
 
       @media (max-width: 991px) {
