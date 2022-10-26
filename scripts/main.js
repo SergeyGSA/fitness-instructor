@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function () {
   const burger = document.querySelector('#burger'),
     navMenu = document.querySelector('#nav-menu'),
-    navLinks = document.querySelectorAll('#nav-menu__link'),
+    navLinks = document.querySelectorAll('.nav-menu__link'),
     body = document.querySelector('body')
 
   // Open burger menu

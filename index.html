@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -37,30 +37,30 @@
         </div>
         <ul class="nav-menu" id="nav-menu">
           <li class="nav-menu__item">
-            <a class="nav-menu__link" id="nav-menu__link" href="#intro">
+            <a class="nav-menu__link" href="#intro">
               Главная???
             </a>
           </li>
           <li class="nav-menu__item">
-            <a class="nav-menu__link" id="nav-menu__link" href="#">
+            <a class="nav-menu__link" href="#">
               Типы тренировок
             </a>
           </li>
           <li class="nav-menu__item">
-            <a class="nav-menu__link" id="nav-menu__link" href="#">Цены???</a>
+            <a class="nav-menu__link" href="#">Цены???</a>
           </li>
           <li class="nav-menu__item">
-            <a class="nav-menu__link" id="nav-menu__link" href="#reviews">
+            <a class="nav-menu__link" href="#reviews">
               Отзывы
             </a>
           </li>
           <li class="nav-menu__item">
-            <a class="nav-menu__link" id="nav-menu__link" href="#faq">
+            <a class="nav-menu__link" href="#faq">
               Вопросы и ответы
             </a>
           </li>
           <li class="nav-menu__item">
-            <a class="nav-menu__link" id="nav-menu__link" href="#">Контакты</a>
+            <a class="nav-menu__link" href="#">Контакты</a>
           </li>
         </ul>
       </nav>
@@ -130,20 +130,20 @@
       <!-- INTRO -->
       <section id="intro" class="intro">
         <div class="intro-wrapper">
-          <h1 class="intro__heading">
+          <h1 class="intro-heading">
             Персональные тренировки
             <br />
             в формате онлайн
           </h1>
 
-          <ul class="intro__motivation">
-            <li class="intro__motivation-item">Твой личный тренер</li>
-            <li class="intro__motivation-item">Опыт в фитнесе 11 лет</li>
-            <li class="intro__motivation-item">Волшебный пинок тебе поможет</li>
+          <ul class="intro-motivation">
+            <li class="intro-motivation__item">Твой личный тренер</li>
+            <li class="intro-motivation__item">Опыт в фитнесе 11 лет</li>
+            <li class="intro-motivation__item">Волшебный пинок тебе поможет</li>
           </ul>
 
           <div>
-            <a href="#apply" class="btn intro__apply">Начать заниматься</a>
+            <a href="#apply" class="btn btn-apply">Начать заниматься</a>
           </div>
         </div>
 
@@ -337,7 +337,7 @@
       <section id="faq" class="faq">
         <h2 class="section-heading">Вопросы и ответы</h2>
         <div class="accordion-wrapper">
-          <div class="accordion accordion-flush" id="accordionFaq">
+          <div class="accordion accordion-flush" id="accordionFaqFirst">
             <div class="accordion-item">
               <h2 class="accordion-header" id="flush-headingOne">
                 <button
@@ -355,7 +355,7 @@
                 id="flush-collapseOne"
                 class="accordion-collapse collapse"
                 aria-labelledby="flush-headingOne"
-                data-bs-parent="#accordionFaq"
+                data-bs-parent="#accordionFaqFirst"
               >
                 <div class="accordion-body">
                   Вы занимаетесь с персональным тренером по видеосвязи. Всё, что
@@ -382,7 +382,7 @@
                 id="flush-collapseTwo"
                 class="accordion-collapse collapse"
                 aria-labelledby="flush-headingTwo"
-                data-bs-parent="#accordionFaq"
+                data-bs-parent="#accordionFaqFirst"
               >
                 <div class="accordion-body">
                   В большинстве случаев для начала будет достаточно работы с
@@ -409,7 +409,7 @@
                 id="flush-collapseThree"
                 class="accordion-collapse collapse"
                 aria-labelledby="flush-headingThree"
-                data-bs-parent="#accordionFaq"
+                data-bs-parent="#accordionFaqFirst"
               >
                 <div class="accordion-body">
                   Вы можете начать тренировки с любым уровнем физической
@@ -423,7 +423,7 @@
           <!--  -->
           <!--  -->
 
-          <div class="accordion accordion-flush" id="accordionFaq">
+          <div class="accordion accordion-flush" id="accordionFaqSecond">
             <div class="accordion-item">
               <h2 class="accordion-header" id="flush-headingFour">
                 <button
@@ -441,7 +441,7 @@
                 id="flush-collapseFour"
                 class="accordion-collapse collapse"
                 aria-labelledby="flush-headingFour"
-                data-bs-parent="#accordionFaq"
+                data-bs-parent="#accordionFaqSecond"
               >
                 <div class="accordion-body">
                   Да. Все наши тренеры – профессионалы своего дела, а значит,
@@ -471,7 +471,7 @@
                 id="flush-collapseFive"
                 class="accordion-collapse collapse"
                 aria-labelledby="flush-headingFive"
-                data-bs-parent="#accordionFaq"
+                data-bs-parent="#accordionFaqSecond"
               >
                 <div class="accordion-body">
                   Да, вы можете тренироваться вдвоем, если находитесь вместе в
@@ -499,7 +499,7 @@
                 id="flush-collapseSix"
                 class="accordion-collapse collapse"
                 aria-labelledby="flush-headingSix"
-                data-bs-parent="#accordionFaq"
+                data-bs-parent="#accordionFaqSecond"
               >
                 <div class="accordion-body">
                   Да. В анкете, которая заполняется перед началом тренировок, вы
@@ -529,6 +529,7 @@
               placeholder="Введите ваше имя"
               aria-label="Username"
               name="username"
+              id="username"
               required
             />
           </div>
@@ -542,6 +543,7 @@
               placeholder="(999)-999-9999"
               aria-label="phone number"
               name="phone"
+              id="phone"
               aria-describedby="phone-number-addon"
               pattern="^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$"
               required
@@ -555,11 +557,12 @@
               placeholder="Как с вами связаться (Viber, Telegram) и в какое время?"
               aria-label="comments"
               name="comments"
+              id="comments"
               required
             ></textarea>
           </div>
 
-          <button class="btn intro__apply" type="submit">
+          <button class="btn btn-apply" type="submit">
             Оставить заявку
           </button>
         </form>
