@@ -5,7 +5,7 @@
   "main": "server/index.js",
   "scripts": {
     "dev": "nodemon server/index.js",
-    "node-sass": "node-sass --watch --output-style compressed -o styles styles/scss/main.scss"
+    "node-sass": "node-sass --watch --output-style compressed -o styles/css styles/scss/main.scss"
   },
   "author": "",
   "license": "ISC",

@@ -1,0 +1,33 @@
+@import '../_variables.scss';
+
+.reviews {
+  padding: $base * 25 0 $base * 12.5 0;
+  background-color: $secondary;
+
+  &__item {
+    max-width: 50%;
+    margin: 0 auto;
+    color: $dark;
+    padding-bottom: $base * 25;
+
+    p {
+      font-size: $fs-m;
+      line-height: 1.5;
+      font-weight: 400;
+    }
+
+    &-author {
+      font-size: $fs-l;
+      line-height: 1.35;
+      font-weight: 600;
+      color: $dark;
+    }
+  }
+}
+
+.carousel-control-next,
+.carousel-control-prev,
+.carousel-indicators {
+  /* Change default color of arrows and indicators from white to black */
+  filter: invert(100%);
+}

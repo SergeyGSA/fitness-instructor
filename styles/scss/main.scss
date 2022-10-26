@@ -5,6 +5,9 @@
 /* =COMPONENTS= */
 @import './components/header.scss';
 @import './components/intro.scss';
+@import './components/reviews.scss';
+@import './components/faq.scss';
+@import './components/apply.scss';
 /* =/COMPONENTS= */
 
 // FIXME: Set font size for right adaptive
@@ -71,129 +74,6 @@ body {
   font-size: $fs-xl;
 }
 
-/* ================= REVIEWS ================ */
-.reviews {
-  padding: 100px 0 50px 0;
-  background-color: $secondary;
-}
-
-.carousel-item {
-  padding-bottom: 100px;
-}
-
-.carousel-item p {
-  font-size: $fs-m;
-  line-height: 1.5;
-  font-weight: 400;
-}
-
-.reviews__item {
-  max-width: 50%;
-  margin: 0 auto;
-  color: $dark;
-}
-
-.reviews__item-author {
-  font-size: $fs-l;
-  line-height: 1.35;
-  font-weight: 600;
-  color: $dark;
-}
-
-.carousel-control-next,
-.carousel-control-prev,
-.carousel-indicators {
-  /* Change default color of arrows and indicators from white to black */
-  filter: invert(100%);
-}
-
-/* ================= /REVIEWS ================ */
-
-/* ================= FAQ ================ */
-.faq {
-  padding: 100px 100px 150px 100px;
-  position: relative;
-}
-
-.faq::before {
-  content: '';
-  display: block;
-  width: 200px;
-  height: 200px;
-  position: absolute;
-  top: 150px;
-  left: 150px;
-  border: 5px solid $primary;
-  z-index: 1;
-}
-
-.faq::after {
-  content: '';
-  display: block;
-  width: 200px;
-  height: 200px;
-  position: absolute;
-  top: 250px;
-  right: 150px;
-  border: 5px solid $primary;
-  z-index: 1;
-}
-
-.accordion-wrapper {
-  display: flex;
-  justify-content: space-evenly;
-}
-
-.accordion {
-  width: 40%;
-  z-index: 9;
-}
-
-.accordion-button:focus {
-  box-shadow: none;
-}
-
-.accordion-header {
-  font-size: $fs-l;
-  line-height: 1.2;
-  font-weight: 600;
-  color: $dark;
-}
-
-.accordion-body {
-  font-size: $fs-m;
-  line-height: 1.4;
-  font-weight: 600;
-  color: $dark;
-}
-/* ================= /FAQ ================ */
-
-/* ================= APPLY ================ */
-.apply {
-  padding: 100px 0 50px 0;
-  background-color: $primary;
-}
-
-.apply__form {
-  max-width: 30%;
-  min-height: 400px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  padding: 50px;
-  border-radius: 5%;
-  background-color: $secondary;
-}
-
-.apply__form label {
-  font-size: $fs-s;
-  font-weight: 700;
-  color: $dark;
-}
-/* ================= /APPLY ================ */
-
-/* ================= FOOTER ================ */
 .footer {
   background: $dark;
   color: $secondary;
@@ -201,4 +81,3 @@ body {
   display: flex;
   justify-content: center;
 }
-/* ================= /FOOTER ================ */

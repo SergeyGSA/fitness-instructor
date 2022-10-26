@@ -1,0 +1,63 @@
+@import '../_variables.scss';
+
+.faq {
+  padding-top: $base * 25;
+  padding-bottom: $base * 37.5;
+  padding-right: $base * 25;
+  padding-left: $base * 25;
+  position: relative;
+
+  &::before {
+    content: '';
+    display: block;
+    width: $base * 50;
+    height: $base * 50;
+    position: absolute;
+    top: $base * 37.5;
+    left: $base * 37.5;
+    border: 5px solid $primary;
+    z-index: 1;
+  }
+
+  &::after {
+    content: '';
+    display: block;
+    width: $base * 50;
+    height: $base * 50;
+    position: absolute;
+    top: $base * 62.5;
+    right: $base * 37.5;
+    border: 5px solid $primary;
+    z-index: 1;
+  }
+}
+
+.accordion {
+  width: 40%;
+  z-index: 9;
+
+  &-wrapper {
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  &-button {
+    &:focus {
+      box-shadow: none;
+    }
+  }
+
+  &-header {
+    font-size: $fs-l;
+    line-height: 1.2;
+    font-weight: 600;
+    color: $dark;
+  }
+
+  &-body {
+    font-size: $fs-m;
+    line-height: 1.4;
+    font-weight: 600;
+    color: $dark;
+  }
+}
